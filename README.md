@@ -18,17 +18,17 @@
   - exception：自定义异常
   - utils：自定义工具
 - front：前台系统代码部分
-- mapper：mybatis代码
 - pojo：公共实体层代码
 
 前台与后台都是分模块建包，其下层包结构都是：
 
 - service：业务层
 - controller：控制层
+- mapper：mybatis代码
 - entity：实体层（仅在该模块下使用的实体，否则到公共实体包下创建）
 - exception：自定义异常（仅在该模块下使用的自定义异常，否则到common的exception下创建）
 
-因为表比较少，且为单人开发，所以不打算将mapper分模块来写。entity和exception若没用到，则不会创建相应的文件夹。
+entity和exception若没用到，则不会创建相应的文件夹。
 
 > 后续若结构有变，我会第一时间更新
 
