@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="vip.linfeng.front.demo.mapper.BlogTableDemoMapper">
+    <resultMap id="blogTableDemoAll" type="demo">
+        <id column="demo_id" property="demoId"/>
+        <result column="demo_content" property="demoContent"/>
+        <result column="create_time" property="createTime"/>
+    </resultMap>
+
+    <select id="selectDemoList" resultMap="blogTableDemoAll">
+        select
+            demo_id,
+            demo_content,
+            create_time
+        from
+            blog_demo
+    </select>
+</mapper>
